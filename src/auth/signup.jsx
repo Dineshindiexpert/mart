@@ -110,7 +110,7 @@ const SignUp = () => {
                 {/* Footer Link */}
                 <div className="text-center mt-4">
                   <span className="text-muted small">Already have an account? </span>
-                  <a href="/signin" 
+                  <a href="/" 
                      className="small fw-bold text-decoration-none" 
                      style={{ color: '#FE480B' }}>
                     Sign In Here
