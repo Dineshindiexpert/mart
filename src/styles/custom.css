@@ -1,0 +1,57 @@
+@import './main.scss'; 
+@import './css/notfound.css'; 
+@import './css/sidebar.css'; 
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body { 
+  font-family: $font-family-inter; 
+} 
+
+
+.layout-container { 
+  display: flex; 
+  width: 100%; 
+  min-height: 100vh; 
+  background-color: #F8F9FB; 
+  flex-direction: row; 
+} 
+
+.main-content { 
+  flex-grow: 1; 
+  padding: 32px 40px; 
+  margin-left: 90px; 
+  color: #1A1C23; 
+} 
+
+
+@media (max-width: 768px) { 
+  .layout-container { 
+    flex-direction: column; 
+  } 
+  
+  .main-content { 
+    padding: 20px 16px; 
+    margin-left: 0;  
+    margin-bottom: 70px;  
+  } 
+} 
+
+@media (max-width: 576px) {  
+  .responsive-cal { 
+    right: 0px !important; 
+    left: auto !important; 
+    width: 100vw; 
+    max-width: 330px; 
+    overflow-x: auto; 
+  } 
+    
+  .rdrCalendarWrapper { 
+    font-size: 11px !important; 
+  } 
+}

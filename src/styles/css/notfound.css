@@ -1,0 +1,62 @@
+.notfound-wrapper{
+    background:#0B0C10;
+    color:white;
+}
+
+/* Glow */
+.glow-effect{
+    position:absolute;
+    width:450px;
+    height:450px;
+    top:-120px;
+    background:radial-gradient(
+        circle,
+        rgba(254,72,11,0.15) 0%,
+        transparent 70%
+    );
+}
+
+/* 404 */
+.error-404{
+    font-size:140px;
+    letter-spacing:-6px;
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #6b7280 100%
+    );
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* Badge */
+.error-badge{
+    background:rgba(254,72,11,0.15) !important;
+    color:#FE480B !important;
+    border:1px solid rgba(254,72,11,0.3);
+}
+
+/* Text */
+.error-text{
+    color:#8A8F98;
+    font-size:15px;
+    line-height:1.7;
+}
+
+/* Button */
+.dashboard-btn{
+    color:#111217;
+}
+
+/* Responsive */
+@media(max-width:576px){
+
+    .error-404{
+        font-size:100px;
+    }
+
+    .error-text{
+        font-size:14px;
+    }
+
+}
