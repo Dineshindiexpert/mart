@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Card } from 'react-bootstrap'; // Pure React Bootstrap elements
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { trafficData } from '../data/trafficData'; // External Data Imported
+import { trafficData } from '../data/TrafficData'; 
 import { ArrowRight } from 'react-bootstrap-icons';
 
 // Figma Orange Circular Bubble Tooltip
