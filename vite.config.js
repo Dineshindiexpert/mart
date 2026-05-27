@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-})
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // Isse Sass compiler bootstrap ki internal legacy warnings ko ignore marega
+        silenceDeprecations: ['import', 'global-builtin', 'meta-functions', 'legacy-js-api'],
+      },
+    },
+  },
+});
