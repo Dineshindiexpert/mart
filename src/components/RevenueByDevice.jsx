@@ -15,7 +15,7 @@ const RevenueByDeviceApex = () => {
       type: 'donut',
       fontFamily: "'Inter', sans-serif",
       animations: { enabled: true },
-      
+
       offsetX: 0,
       offsetY: 0
     },
@@ -33,7 +33,7 @@ const RevenueByDeviceApex = () => {
       },
       active: {
         allowMultipleDataPointsSelection: false,
-        filter: { type: 'none' } 
+        filter: { type: 'none' }
       }
     },
     plotOptions: {
@@ -41,7 +41,7 @@ const RevenueByDeviceApex = () => {
         expandOnClick: true,
         customScale: 1,
         donut: {
-          size: '70%', 
+          size: '70%',
           labels: {
             show: true,
             name: {
@@ -54,7 +54,7 @@ const RevenueByDeviceApex = () => {
             },
             value: {
               show: true,
-              fontSize: '32px', 
+              fontSize: '32px',
               fontFamily: "'Inter', sans-serif",
               fontWeight: '700',
               // color: '#1C1C1E',
@@ -101,69 +101,130 @@ const RevenueByDeviceApex = () => {
         </div>
       </div>
 
-      {/* Figma Dual Column Grid Section with Normalized Margins */}
-      <Row className="g-0 mt-3 pt-3   position-relative">
+      <Row className="g-0 mt-3 pt-3">
 
-        {/* Left Section (Desktop & Mobile) */}
-        <Col xs={6} className="pe-3 d-flex flex-column gap-2 border-end">
+        {/* LEFT COLUMN */}
+        <Col xs={12} md={6} className="pe-md-3 border-md-end">
+
           {deviceDataLeft.map((item, index) => (
-            <div key={index} className="d-flex align-items-center justify-content-between w-100">
+            <div
+              key={index}
+              className="d-flex align-items-center justify-content-between mb-3 flex-nowrap"
+            >
 
-              {/* Label and Indicator Dot */}
-              <div className="d-flex align-items-center gap-2">
+              {/* LEFT LABEL */}
+              <div
+                className="d-flex align-items-center gap-2"
+                style={{ width: '35%' }}
+              >
                 <span
-                  className="rounded-circle d-inline-block flex-shrink-0"
-                  style={{ width: '6px', height: '6px', backgroundColor: item.color }}
-                ></span>
-                <span className="text-secondary small">
+                  className="rounded-circle flex-shrink-0"
+                  style={{
+                    width: '6px',
+                    height: '6px',
+                    backgroundColor: item.color
+                  }}
+                />
+
+                <span
+                  className="text-secondary small text-truncate"
+                >
                   {item.label}
                 </span>
               </div>
 
-              {/* Figma Decimals Values & Percentage Layout */}
-              <div className="d-flex align-items-center gap-2">
-                <span className="fw-bold text-dark small me-5">
-                  ${item.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              {/* CENTER VALUE */}
+              <div
+                className="text-center"
+                style={{ width: '40%' }}
+              >
+                <span className="fw-bold text-dark small">
+                  $
+                  {item.value.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                  })}
                 </span>
-                <span className="text-muted text-opacity-50 extra-small" style={{ fontSize: '11px' }}>
+              </div>
+
+              {/* RIGHT PERCENTAGE */}
+              <div
+                className="text-end"
+                style={{ width: '25%' }}
+              >
+                <span
+                  className="text-muted"
+                  style={{ fontSize: '11px' }}
+                >
                   {item.percentage}
                 </span>
               </div>
 
             </div>
           ))}
+
         </Col>
 
-        {/* Center Vertical Border Divider Line}
-        
+        {/* RIGHT COLUMN */}
+        <Col xs={12} md={6} className="ps-md-3">
 
-        {/* Right Section (Tablet & Unknown) */}
-        <Col xs={6} className="ps-3 d-flex flex-column gap-2">
           {deviceDataRight.map((item, index) => (
-            <div key={index} className="d-flex align-items-center justify-content-between w-100">
+            <div
+              key={index}
+              className="d-flex align-items-center justify-content-between mb-3 flex-nowrap"
+            >
 
-              {/* Label and Indicator Dot */}
-              <div className="d-flex align-items-center gap-2">
+              {/* LEFT LABEL */}
+              <div
+                className="d-flex align-items-center gap-2"
+                style={{ width: '35%' }}
+              >
                 <span
-                  className="rounded-circle d-inline-block flex-shrink-0 "
-                  style={{ width: '6px', height: '6px', backgroundColor: item.color }}
-                ></span>
-                <span className="text-secondary small ">
+                  className="rounded-circle flex-shrink-0"
+                  style={{
+                    width: '6px',
+                    height: '6px',
+                    backgroundColor: item.color
+                  }}
+                />
+
+                <span
+                  className="text-secondary small text-truncate"
+                >
                   {item.label}
                 </span>
               </div>
 
-            
-              <div className="d-flex align-items-center gap-2">
-                <span className="fw-bold text-dark small me-5">${item.value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              {/* CENTER VALUE */}
+              <div
+                className="text-center"
+                style={{ width: '40%' }}
+              >
+                <span className="fw-bold text-dark small">
+                  $
+                  {item.value.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                  })}
                 </span>
-                <span className="text-muted text-opacity-50 extra-small" style={{ fontSize: '11px' }}>
+              </div>
+
+              {/* RIGHT PERCENTAGE */}
+              <div
+                className="text-end"
+                style={{ width: '25%' }}
+              >
+                <span
+                  className="text-muted"
+                  style={{ fontSize: '11px' }}
+                >
                   {item.percentage}
                 </span>
               </div>
 
             </div>
           ))}
+
         </Col>
 
       </Row>
