@@ -65,7 +65,7 @@ const SignUp = () => {
                 {/* Full Name Field */}
                 <Form.Group className="mb-3" controlId="formFullName">
                   <Form.Label className="small fw-semibold text-secondary mb-1">Full Name</Form.Label>
-                  <Form.Control type="text" placeholder="Amit Sharma" className="py-2 px-3 rounded-3" isInvalid={!!errors.fullName} {...register("fullName", { required: "Full name is required" })} />
+                  <Form.Control type="text" placeholder="enter your full name" className="py-2 px-3 rounded-3" isInvalid={!!errors.fullName} {...register("fullName", { required: "Full name is required" })} />
                   <Form.Control.Feedback type="invalid" className="small">
                     {errors.fullName?.message}
                   </Form.Control.Feedback>
