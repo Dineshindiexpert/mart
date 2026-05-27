@@ -10,7 +10,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Pending",
-        img: "./src/data/images/clock.png"
+        img: "/products/images/clock.png"
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 556.16,
         status: "Shipping",
-        img: "./src/data/images/basket handles.png"
+        img: "/products/images/basket handles.png"
     },
     {
         id: 3,
@@ -36,7 +36,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 135.00,
         status: "Refund",
-        img: "./src/data/images/flower.png"
+        img: "/products/images/flower.png"
 
     },
     {
@@ -50,7 +50,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Completed",
-        img: "./src/data/images/table.png"
+        img: "/products/images/table.png"
     },
     {
         id: 5,
@@ -63,7 +63,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Shipping",
-        img: "./src/data/images/poettry.png"
+        img: "/products/images/poettry.png"
     },
     {
         id: 6,
@@ -76,7 +76,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Completed",
-        img: "./src/data/images/rose palk.png"
+        img: "/products/images/rose palk.png"
     },
     {
         id: 7,
@@ -89,7 +89,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Pending",
-        img: "./src/data/images/table lamp.png"
+        img: "/products/images/table lamp.png"
     },
     {
         id: 8,
@@ -102,7 +102,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Refund",
-        img: "./src/data/images/wall clock.png"
+        img: "/products/images/wall clock.png"
     },
     {
         id: 9,
@@ -115,7 +115,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Completed",
-        img: "./src/data/images/flowering cacust.png"
+        img: "/products/images/flowering cacust.png"
 
     },
     {
@@ -126,7 +126,7 @@ const Orders = [
         date: "Sep 8, 2020",
         revenue: 60.72,
         status: "Completed",
-        img: "./src/data/images/shell collection.png"
+        img: "/products/images/shell collection.png"
     }
 ];
 export default Orders;

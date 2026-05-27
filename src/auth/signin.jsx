@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, Link } from 'react-router-dom';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap'; 
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import Users from '../data/users';
 
 const SignIn = () => {
@@ -9,45 +9,56 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   const onSignInSubmit = (data) => {
-    const user = Users.find(
-      (u) => u.email === data.email && u.password === data.password
+   
+    const staticUser = Users.find(
+      (u) => u.email.toLowerCase() === data.email.toLowerCase() && u.password === data.password
     );
 
-    if (user) {
-      localStorage.setItem("loggedInUser", JSON.stringify(user));
+     
+    const localUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+    const localUser = localUsers.find(
+      (u) => u.email.toLowerCase() === data.email.toLowerCase() && u.password === data.password
+    );
+ 
+    const finalUser = staticUser || localUser;
+
+    if (finalUser) {
+     
+      localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("loggedInUser", JSON.stringify(finalUser));
       navigate("/dashboard");
     } else {
-      alert("Invalid email or password");
+      alert(" Invalid email or password. Please try again!");
     }
   };
 
   return (
     // Outer Center Wrapper using React Bootstrap Fluid Container
     <Container fluid className="min-vh-100 bg-light d-flex justify-content-center align-items-center p-3 p-sm-4" style={{ fontFamily: "'Inter', sans-serif" }}>
-      
+
       {/* Main Card Wrapper */}
       <Card className="border-0 shadow-lg overflow-hidden w-100" style={{ maxWidth: '1040px', borderRadius: '24px' }}>
         <Row className="g-0">
-          
+
           {/* Left Side Brand Panel Column */}
-          <Col xs={12} lg={5} className="d-flex flex-column justify-content-between p-4 p-md-5 text-white" 
-               style={{ background: 'linear-gradient(135deg, #FF7E40, #FE480B)', minHeight: '350px' }}>
-            
+          <Col xs={12} lg={5} className="d-flex flex-column justify-content-between p-4 p-md-5 text-white"
+            style={{ background: 'linear-gradient(135deg, #FF7E40, #FE480B)', minHeight: '350px' }}>
+
             <div className="fs-3 fw-bolder tracking-wide">mart</div>
-            
+
             <div className="my-4">
               <h2 className="fw-bold display-6 mb-3">Welcome Back!</h2>
               <p className="opacity-75 lh-base small d-none d-sm-block">
                 Discover your sales analytics data records in a clean premium dashboard panel context.
               </p>
             </div>
-            
+
             <div className="small opacity-50 d-none d-sm-block">© 2026 Mart Analytics Inc.</div>
           </Col>
 
           {/* Right Side Form Inputs Panel Column */}
           <Col xs={12} lg={7} className="bg-white p-4 p-md-5 d-flex flex-column justify-content-center">
-            
+
             <div className="mb-4">
               <h3 className="fw-bold text-dark h2 mb-1">Sign In to Account</h3>
               <p className="text-muted small">Please enter your registered credentials below</p>
@@ -103,11 +114,11 @@ const SignIn = () => {
               </Form.Group>
 
               {/* Action Submit Button */}
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 size="lg"
-                className="w-100 text-white fw-semibold fs-6 border-0 rounded-3 " 
-                style={{   height: '48px', background :' rgb(235, 96, 32)' }}
+                className="w-100 text-white fw-semibold fs-6 border-0 rounded-3 "
+                style={{ height: '48px', background: ' rgb(235, 96, 32)' }}
                 onMouseOver={(e) => e.target.style.backgroundColor = 'bg-warning'}
                 onMouseOut={(e) => e.target.style.backgroundColor = 'bg-warning'}
               >
