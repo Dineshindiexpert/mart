@@ -90,7 +90,7 @@ const RevenueByDeviceApex = () => {
           Revenue by device
         </h4>
         <a href="/" className=" text-decoration-none text-secondary fw-semibold small d-flex align-items-center gap-1">
-          More <span><img src='./src/assets/icons/arrow-right.svg' alt='edit pen' /></span>
+          More <span><img src='/assets/icons/arrow-right.svg' alt='edit pen' /></span>
         </a>
       </div>
 

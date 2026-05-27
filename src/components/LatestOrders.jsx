@@ -29,7 +29,7 @@ const LatestOrders = () => {
           Latest Orders
         </h4>
         <a href="#orders" className="text-muted text-decoration-none fw-semibold small d-flex align-items-center gap-1">
-          More <span><img src='./src/assets/icons/arrow-right.svg' alt='edit pen'/></span> 
+          More <span><img src='/assets/icons/arrow-right.svg' alt='edit pen'/></span> 
         </a>
       </div>
 
@@ -100,10 +100,10 @@ const LatestOrders = () => {
                 <td className="py-3 text-end pe-3">
                   <div className="d-flex justify-content-end align-items-center gap-3">
                     <button className="btn btn-link p-0 text-muted border-0 shadow-none" title="Edit">
-                      <img src='./src/assets/icons/editpen.svg' alt='edit pen'/>
+                      <img src='/assets/icons/editpen.svg' alt='edit pen'/>
                     </button>
                     <button className="btn btn-link p-0 text-muted border-0 shadow-none" title="Delete">
-                     <img src='./src/assets/icons/trash.svg' alt='trash'/>
+                     <img src='/assets/icons/trash.svg' alt='trash'/>
                     </button>
                     <button className="btn btn-link p-0 text-muted border-0 shadow-none" title="More">
                       <ThreeDots className='text-secondary'/>

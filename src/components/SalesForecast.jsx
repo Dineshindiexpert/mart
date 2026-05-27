@@ -17,7 +17,7 @@ const SalesForecast = () => {
         <div>
           <div className="d-flex justify-content-between align-items-center mb-4">
             <span className=" small fw-medium fs-4">Sales forecast</span>
-            <span className="text-muted fw-semibold cursor-pointer " title="Info">More <span><img src='./src/assets/icons/arrow-right.svg' alt='edit pen'/></span>  </span>
+            <span className="text-muted fw-semibold cursor-pointer " title="Info">More <span><img src='/assets/icons/arrow-right.svg' alt='edit pen'/></span>  </span>
           </div>
         </div>
       

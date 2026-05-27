@@ -35,7 +35,7 @@ const TrafficChart = () => {
       <div className="d-flex justify-content-between align-items-center mb-5">
         <h4 className=" text-dark m-0 fs-5" style={{ fontSize: '18px', letterSpacing: '-0.5px' }}>Traffic</h4>
         <a href="/dashboard" className="text-muted text-decoration-none fw-medium small d-flex align-items-center gap-1">
-          More<span><img src='./src/assets/icons/arrow-right.svg' alt='edit pen'/></span>
+          More<span><img src='/assets/icons/arrow-right.svg' alt='edit pen'/></span>
         </a>
       </div>
 
