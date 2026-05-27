@@ -1,0 +1,44 @@
+ /* Clickable bounding boxes dimensional tracking settings overrides */
+        .side-link-box {
+          width: 46px;
+          height: 46px;
+          transition: all 0.2s ease-in-out;
+          outline: none !important;
+          flex-shrink: 0;
+        }
+
+        /* 1. NON-ACTIVE STATE: Background is soft light translucent white opacity */
+        .side-link-box.non-active-pill {
+          background-color: rgba(255, 255, 255, 0.15) !important;
+          
+          /* Icon inside non-active has clean white look with slight soft layout fade opacity */
+          .sidebar-svg-icon {
+            filter: brightness(0) invert(1) !important;
+            opacity: 0.65;
+            transition: all 0.2s ease;
+          }
+        }
+
+        /* Hover Action System on non-active elements */
+        .side-link-box.non-active-pill:hover {
+          background-color: rgba(255, 255, 255, 0.25) !important;
+          .sidebar-svg-icon {
+            opacity: 1 !important;
+          }
+        }
+
+        /* 2. ACTIVE STATE: Pure White solid background pill container */
+        .side-link-box.active-pill {
+          background-color: #ffffff !important;
+          
+          /* FIXED: SVG icon inside active white panel color flips perfectly to your solid theme warning orange tint */
+          .sidebar-svg-icon {
+            opacity: 1 !important;
+            filter: invert(53%) sepia(85%) saturate(1487%) hue-rotate(352deg) brightness(97%) contrast(93%) !important;
+          }
+        }
+
+        /* Hide layout grid scrollbar visual indicators layers tracks */
+        ::-webkit-scrollbar {
+          display: none;
+        }
